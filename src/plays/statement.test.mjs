@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { statement } from "./billing.mjs";
+import { statement } from "./statement.mjs";
 
 const PLAYS = {
   play1: {
@@ -28,7 +28,7 @@ describe("statement", () => {
         { playID: "play2", audience: 38 },
         { playID: "play3", audience: 42 },
       ],
-      "Customer Name 1"
+      "Customer Name 1",
     );
 
     const result = statement(invoice, PLAYS);
